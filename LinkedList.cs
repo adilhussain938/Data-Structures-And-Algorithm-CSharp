@@ -37,17 +37,20 @@ namespace programs
             {
                 head = newest;
                 tail = newest;
+                Size++;
             }
             else
             {
                 newest.Next=head;
                 head = newest;
+                Size++;
             }
 
         }
         public void AddAfterSpecific(int i,int Size )
         {
 
+            Node newnode = new Node(i,null);
             Node prev = new Node();
             if (head == null)
             {
@@ -57,18 +60,21 @@ namespace programs
             Node temp = head;
             prev = head;
 
-            if(this.Size<Size)
-            { 
+            if(Size>1 && Size < this.Size)
+            {
+                this.Size = 0;
                 while (temp != null && Size != this.Size)
                 {
                     prev = temp;
                     temp = temp.Next;
+                    this.Size++;
                 }
-                if (temp.Element == i)
+                if (Size == this.Size)
                 {
-                    prev.Next = prev.Next.Next;
+                     prev.Next = newnode;
+                    newnode.Next = temp;
                 }
-                }
+            }
             else
             {
                 Console.WriteLine("Please Enter Correct Position in Range");
@@ -97,6 +103,54 @@ namespace programs
             }
 
         }
+
+
+        public void PrintReverseList()
+        {
+            Node prev = null;
+            
+            Node temp= head;
+            Node temp_next=head;
+
+            while (temp_next!=null)
+            {
+                temp_next = temp.Next;
+                temp.Next = prev;
+                prev = temp;
+                temp = temp_next;
+            }
+            head = prev;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public void prinlist()
         {
             Node temp = head;

@@ -19,13 +19,16 @@ namespace programs
             a.insertlast(3, null);
 
             a.insertlast(4, null);
-            a.insertlast(164, null);
-            a.insertlast(154, null);
-            a.insertlast(114, null);
-            a.insertlast(124, null);
-            a.insertFirst(3, null);
-
-            a.removeAfterSpecific(124);
+            //a.insertlast(164, null);
+            //a.insertlast(154, null);
+            //a.insertlast(114, null);
+            //a.insertlast(124, null);
+            //a.insertFirst(3, null);
+            //a.AddAfterSpecific(67, 5);
+            //a.removeAfterSpecific(124);
+            a.prinlist();
+            Console.WriteLine("\n-------------------------------------------");
+            a.PrintReverseList();
             a.prinlist();
             Console.ReadLine();
 
