@@ -1,4 +1,5 @@
-﻿using DoublyLinkedList;
+﻿using BinarySearchTree;
+using DoublyLinkedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,6 +51,15 @@ namespace programs
             //Console.WriteLine("\n-------------------------------------------");
             //a.PrintReverseList();
             //a.prinlist();
+            #endregion
+
+            #region BinarySearchTrees
+            BinarySearchTrees bst = new BinarySearchTrees();
+            bst.CreateTree(8);
+            bst.CreateTree(5);
+            bst.CreateTree(6);
+            bst.CreateTree(9);
+
             #endregion
             Console.ReadLine();
 
