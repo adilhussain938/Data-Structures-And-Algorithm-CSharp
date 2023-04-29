@@ -20,18 +20,18 @@ namespace programs
 
             #region DoublyLinked List
 
-            DoublyLinkedLst ls = new DoublyLinkedLst();
-            ls.insertatlast(4, null, null);
-            ls.insertatlast(14, null, null);
-            ls.insertatlast(124, null, null);
-            ls.insertatlast(43, null, null);
-            ls.insertatlast(445, null, null);
-            ls.printList();
+           // DoublyLinkedLst ls = new DoublyLinkedLst();
+           // ls.insertatlast(4, null, null);
+           // ls.insertatlast(14, null, null);
+           // ls.insertatlast(124, null, null);
+           // ls.insertatlast(43, null, null);
+           // ls.insertatlast(445, null, null);
+           // ls.printList();
 
-            ls.DeletefromLaast();
+           // ls.DeletefromLaast();
 
-           // ls.DeleteAtSpecificPosition(2,2);
-            ls.printList();
+           //// ls.DeleteAtSpecificPosition(2,2);
+           // ls.printList();
             #endregion
 
             #region Singly LinkedList
@@ -55,11 +55,27 @@ namespace programs
 
             #region BinarySearchTrees
             BinarySearchTrees bst = new BinarySearchTrees();
-            bst.CreateTree(8);
-            bst.CreateTree(5);
-            bst.CreateTree(6);
-            bst.CreateTree(9);
+            //bst.root = bst.RecursiveApproach(null,50);
+            //bst.RecursiveApproach(bst.root, 60);
+            //bst.RecursiveApproach(bst.root, 10);
+            //bst.RecursiveApproach(bst.root, 40);
+            //bst.RecursiveApproach(bst.root, 80);
+            ////bst.RecursiveApproach(bst.root, 60);
 
+            //bst.RecursiveApproach(bst.root, 55);
+            //bst.RecursiveApproach(bst.root, 90);
+            //bst.TrverseInorder(bst.root);
+            //Console.WriteLine("---------------preorder------------");
+            //bst.Trversepreorder(bst.root);
+
+            //bst.RecursiveApproach(bst.root, 2);
+            //bst.RecursiveApproach(bst.root, 7);
+            //bst.RecursiveApproach(bst.root, 1);
+
+            //bst.LeftViewOfTree(bst.root);
+            //bst.MergeTwoSorted();
+            bst.arrachar();
+            
             #endregion
             Console.ReadLine();
 
