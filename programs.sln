@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoublyLinkedList", "..\Doub
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchTree", "..\BinarySearchTree\BinarySearchTree.csproj", "{C74FF431-42DE-4FBD-840F-F945C5B54EFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice Programs", "..\Practice Programs\Practice Programs.csproj", "{DBF8C642-7DEE-45E1-88D1-A5DC6EE03892}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{C74FF431-42DE-4FBD-840F-F945C5B54EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C74FF431-42DE-4FBD-840F-F945C5B54EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C74FF431-42DE-4FBD-840F-F945C5B54EFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DBF8C642-7DEE-45E1-88D1-A5DC6EE03892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DBF8C642-7DEE-45E1-88D1-A5DC6EE03892}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DBF8C642-7DEE-45E1-88D1-A5DC6EE03892}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DBF8C642-7DEE-45E1-88D1-A5DC6EE03892}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

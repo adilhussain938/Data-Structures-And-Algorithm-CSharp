@@ -1,5 +1,6 @@
 ﻿using BinarySearchTree;
 using DoublyLinkedList;
+using Practice_Programs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,18 +21,18 @@ namespace programs
 
             #region DoublyLinked List
 
-           // DoublyLinkedLst ls = new DoublyLinkedLst();
-           // ls.insertatlast(4, null, null);
-           // ls.insertatlast(14, null, null);
-           // ls.insertatlast(124, null, null);
-           // ls.insertatlast(43, null, null);
-           // ls.insertatlast(445, null, null);
-           // ls.printList();
+            // DoublyLinkedLst ls = new DoublyLinkedLst();
+            // ls.insertatlast(4, null, null);
+            // ls.insertatlast(14, null, null);
+            // ls.insertatlast(124, null, null);
+            // ls.insertatlast(43, null, null);
+            // ls.insertatlast(445, null, null);
+            // ls.printList();
 
-           // ls.DeletefromLaast();
+            // ls.DeletefromLaast();
 
-           //// ls.DeleteAtSpecificPosition(2,2);
-           // ls.printList();
+            //// ls.DeleteAtSpecificPosition(2,2);
+            // ls.printList();
             #endregion
 
             #region Singly LinkedList
@@ -55,17 +56,32 @@ namespace programs
 
             #region BinarySearchTrees
             BinarySearchTrees bst = new BinarySearchTrees();
-            //bst.root = bst.RecursiveApproach(null,50);
-            //bst.RecursiveApproach(bst.root, 60);
+            bst.root = bst.RecursiveApproach(null, 50);
+            bst.RecursiveApproach(bst.root, 60);
             //bst.RecursiveApproach(bst.root, 10);
+            //Console.WriteLine(   bst.HightOfTree(bst.root));
             //bst.RecursiveApproach(bst.root, 40);
             //bst.RecursiveApproach(bst.root, 80);
-            ////bst.RecursiveApproach(bst.root, 60);
+            //bst.RecursiveApproach(bst.root, 5);
+            //bst.RecursiveApproach(bst.root, 42);
+            //bst.RecursiveApproach(bst.root, 4);
+            //    bst.RecursiveApproach(bst.root, 55);
+            //    bst.RecursiveApproach(bst.root, 35);
+            //    bst.RecursiveApproach(bst.root, 8);
+
+
+            // bst.searchbinarytree(bst.root, 60);
 
             //bst.RecursiveApproach(bst.root, 55);
             //bst.RecursiveApproach(bst.root, 90);
-            //bst.TrverseInorder(bst.root);
+            bst.TrverseInorder(bst.root);
             //Console.WriteLine("---------------preorder------------");
+
+            //bst.deletenode(bst.root, 10, bst.root);
+
+            //Console.WriteLine("---------------preorder after deleting------------");
+            //bst.TrverseInorder(bst.root);
+
             //bst.Trversepreorder(bst.root);
 
             //bst.RecursiveApproach(bst.root, 2);
@@ -74,8 +90,20 @@ namespace programs
 
             //bst.LeftViewOfTree(bst.root);
             //bst.MergeTwoSorted();
-            bst.arrachar();
-            
+            //bst.arrachar();
+
+
+
+
+
+            #endregion
+            #region heap
+     
+            //hp.insertinheap(12);
+            //hp.insertinheap(1);
+            //hp.insertinheap(122);
+                
+
             #endregion
             Console.ReadLine();
 
