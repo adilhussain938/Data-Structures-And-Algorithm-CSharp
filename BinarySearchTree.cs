@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -157,7 +158,7 @@ namespace BinarySearchTree
 
         }
 
-        public void TrverseInorder(TreeNode Root)
+        public TreeNode TrverseInorder(TreeNode Root)
         {
 
             if (Root != null)
@@ -168,6 +169,8 @@ namespace BinarySearchTree
                 TrverseInorder(Root.Right);
 
             }
+            return Root;
+
 
         }
         public void Trversepreorder(TreeNode Root)
@@ -220,6 +223,138 @@ namespace BinarySearchTree
             }
 
         }
+        public virtual bool identicalTrees(TreeNode a, TreeNode b)
+        {
+            /*1. both empty */
+            if (a == null && b == null)
+            {
+                return true;
+            }
+
+            /* 2. both non-empty -> compare them */
+            if (a != null && b != null)
+            {
+                return (a.Element == b.Element
+                        && identicalTrees(a.Left, b.Left)
+                        && identicalTrees(a.Right, b.Right));
+            }
+
+            /* 3. one empty, one not -> false */
+            return false;
+        
+        }
+
+
+        public int  MaxElement(TreeNode node)
+        {
+        
+            if (node == null)
+            {
+                return int.MinValue;
+            }
+            int max = 0;
+            int x = MaxElement(node.Left);
+            int y = MaxElement(node.Right);
+            if (x==int.MinValue && y==int.MinValue)
+            {
+                return (int)node.Element;
+            }
+            if (x==int.MinValue || y==int.MinValue)
+            {
+
+                return (int)node.Element; 
+            }
+            if( node.Left.Element> node.Element )
+            {
+                return max = (int)node.Left.Element;
+            }
+            else if (node.Right.Element > node.Element)
+            {
+                return max = (int)node.Right.Element;
+            }
+
+            return (int)node.Element;
+
+
+        }
+
+
+
+
+            public TreeNode mirror(TreeNode node)
+        {
+            if (node == null)
+            {
+                return node;
+            }
+
+            /* do the subtrees */
+            TreeNode left = mirror(node.Left);
+            TreeNode right = mirror(node.Right);
+
+            /* swap the left and right pointers */
+            node.Left = right;
+            node.Right = left;
+
+            return node;
+        }
+
+
+        Boolean isMirror(TreeNode node1, TreeNode node2)
+        {
+            // if both trees are empty,
+            // then they are mirror image
+            if (node1 == null && node2 == null)
+                return true;
+
+            // For two trees to be mirror images,
+            // the following three conditions must be true
+            // 1 - Their root node's key must be same
+            // 2 - left subtree of left tree and right
+            // subtree of right tree have to be mirror images
+            // 3 - right subtree of left tree and left subtree
+            // of right tree have to be mirror images
+            if (node1 != null && node2 != null
+                && node1.Element == node2.Element)
+                return (isMirror(node1.Left, node2.Right)
+                        && isMirror(node1.Right, node2.Left));
+
+            // if none of the above conditions
+            // is true then root1 and root2 are
+            // mirror images
+            return false;
+        }
+        public  Boolean hasPath(TreeNode root,
+                        List<int> arr, int x)
+        {
+            // if root is NULL
+            // there is no path
+            if (root == null)
+                return false;
+
+            // push the node's value in 'arr'
+            arr.Add((int)root.Element);
+
+            // if it is the required node
+            // return true
+            if ((int)root.Element == x)
+                return true;
+
+            // else check whether the required node lies
+            // in the left subtree or right subtree of
+            // the current node
+            if (hasPath(root.Left, arr, x) ||
+                hasPath(root.Right, arr, x))
+                return true;
+
+            // required node does not lie either in the
+            // left or right subtree of the current node
+            // Thus, remove current node's value from
+            // 'arr'and then return false    
+            arr.RemoveAt(arr.Count - 1);
+            return false;
+        }
+
         public void LeftViewOfTree(TreeNode root)
         {
 
@@ -266,7 +401,11 @@ namespace BinarySearchTree
             }
 
         }
-
+        //public bool BstCheck(TreeNode Node)
+        //{
+        
+            
+        //}
 
         public void CreateTreeforwhileLoop(int element)
         {

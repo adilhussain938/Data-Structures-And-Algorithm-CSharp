@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EllipticCurve.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,36 @@ namespace Practice_Programs
 {
     public class PracticeProgram
     {
+
+        public int minCoins(int n, int[] a)
+        {
+            if (n==6)
+            {
+                Console.WriteLine(n);
+            }
+
+            if (n == 0) return 0;
+
+            int ans = Int32.MaxValue;
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (n - a[i] >= 0)
+                {
+                   
+                       int subAns = minCoins(n - a[i], a);
+                    
+                    if (subAns != int.MaxValue &&
+                            subAns + 1 < ans)
+                    {
+                        ans = subAns + 1;
+                       
+                    }
+                }
+            }
+            return ans; 
+           // return dp[n] = ans;
+        }
         public List<int> compareTriplets(List<int> a, List<int> b)
         {
             List<int> aa = new List<int>();
