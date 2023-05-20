@@ -53,6 +53,7 @@
     <Compile Include="PracticeProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SlidingWindowProblems.cs" />
     <Compile Include="TreeNode.cs" />
   </ItemGroup>
   <ItemGroup>

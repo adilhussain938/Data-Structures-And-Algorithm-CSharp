@@ -10,6 +10,124 @@ namespace Practice_Programs
     public class PracticeProgram
     {
 
+        //[0,0,1,0,0,1,1,0,1,1,0]
+
+        public int flipo1()
+        {
+
+            int[] a = new int[] { 1, 0, 0, 1, 1, 0, 0, 0, 1, 0 };
+
+            int k = 2;
+            int z = k;
+            int j = 0;
+            int count = 0;
+            int max=int.MinValue;
+            bool flag=false;
+            for (int i =0; i< a.Length;i++)
+            {
+
+                if (a[i] == 1)
+                {
+
+                    count++;
+                    flag = false;
+                }
+                else  if (a[i] == 0 && k > 0)
+                {
+                     
+                     k--;
+                     count++;
+                     flag = false;
+                }
+                else if (k == 0)
+                {
+                    while (k < z-1)
+                    {
+                        if (a[j] == 0)
+                        {
+                            k++;
+                        }
+                        count--;
+                        j++;
+                        flag = true;
+
+                    }
+                }
+                if (max < count)
+                {
+                    max = count;
+                }
+                
+                if (a[i]==0 &&k>0 && flag==true)
+                {
+                    count++;
+                    k--;
+                }
+                else if (a[i] == 1 && flag == true)
+                {
+                    count++;
+
+                }
+
+            }
+            return max;
+        
+        }
+
+            public void flipoa1()
+        {
+            int[] a = new int[]{ 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0};
+
+            int k = 2;
+            int count = 0;
+            int prevcount = 0;
+            for (var i=0;i< a.Length; i++)
+            {
+                //if (k==0 && count+prevcount > a.Length -i)
+                //{
+                //    Console.WriteLine(count+prevcount);
+                //    break;
+                //}
+                if (a[i] == 1)
+                {
+                    count++;
+                }
+               else if (k == 0 )
+                {
+                    i--;
+                    for (var j = count; j > 0; j--)
+                    {
+                        
+                        if (a[count-1] == 1)
+                        {
+                            prevcount++;
+                            count--;
+                        }
+                        else
+                        {
+
+                            count = 0;
+                            k = 2;
+                            break;
+                        }
+                        
+                    }
+
+                }
+              else  if (k>0)
+                { 
+                    if (a[i]==0)
+                    {
+                        k--;
+                        count++;
+                    }
+                }
+                
+            }
+        }
+
+
+
         public int minCoins(int n, int[] a)
         {
             if (n==6)

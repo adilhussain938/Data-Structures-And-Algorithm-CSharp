@@ -57,15 +57,15 @@ namespace programs
             #region BinarySearchTrees
             BinarySearchTrees bst = new BinarySearchTrees();
             BinarySearchTrees bst1 = new BinarySearchTrees();
-            bst.root = bst.RecursiveApproach(null, 50);
-            bst.RecursiveApproach(bst.root, 60);
-            bst.RecursiveApproach(bst.root, 10);
-            bst.RecursiveApproach(bst.root, 5);
-            bst.RecursiveApproach(bst.root, 15);
-            bst.RecursiveApproach(bst.root, 55);
-            var a = new  List<int>();
-            bst.hasPath(bst.root, a, 55);
-           
+            //bst.root = bst.RecursiveApproach(null, 50);
+            //bst.RecursiveApproach(bst.root, 60);
+            //bst.RecursiveApproach(bst.root, 10);
+            //bst.RecursiveApproach(bst.root, 5);
+            //bst.RecursiveApproach(bst.root, 15);
+            //bst.RecursiveApproach(bst.root, 55);
+            //var a = new  List<int>();
+            //bst.hasPath(bst.root, a, 55);
+
             //         50
             //       /   \
             //    10     60
@@ -80,7 +80,7 @@ namespace programs
             //bst1.RecursiveApproach(bst1.root, 20);
 
             //bst.mirror(bst.root);
-            Console.WriteLine(   bst.identicalTrees(bst.root,bst1.root));
+            //Console.WriteLine(   bst.identicalTrees(bst.root,bst1.root));
 
             //Console.WriteLine(   bst.HightOfTree(bst.root));
             //bst.RecursiveApproach(bst.root, 40);
@@ -125,7 +125,8 @@ namespace programs
             //hp.insertinheap(12);
             //hp.insertinheap(1);
             //hp.insertinheap(122);
-
+            SlidingWindowProblems aaa = new SlidingWindowProblems();
+            aaa.PrintFirstNegativeNumberQueue();
 
             #endregion
             Console.ReadLine();
